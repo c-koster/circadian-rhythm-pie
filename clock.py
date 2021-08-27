@@ -18,7 +18,7 @@ OFF_ZERO = (0,0,0)
 
 pi_pin = board.D18
 numpix = 150
-brightness = .1
+brightness = .08
 
 # morning BLUE light hours
 # BLUE light is stimulating
@@ -48,7 +48,7 @@ with neopixel.NeoPixel(pi_pin, numpix, brightness=brightness) as pixels:
         date_string = datetime.datetime.now().strftime("%H:%M:%S")
 
         if date_string == start_morning:
-            color = convert_K_to_RGB(5000)
+            color = convert_K_to_RGB(6000)
             color_change = True
 
         elif date_string == end_morning:
