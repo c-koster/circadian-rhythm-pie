@@ -33,6 +33,8 @@ start_evening = "19:00:00"
 start_night = "22:00:00"
 end_night = "06:00:00"
 
+print("starting infintie clock")
+
 with neopixel.NeoPixel(pi_pin, numpix, brightness=brightness) as pixels:
 
     color_change = False

@@ -5,8 +5,9 @@ Something I struggle with at Middlebury a lot: the dorms have really awfullighti
 
 I'm already using a pi as a Spotify Connect speaker so I'm attaching a neopixel light strip to it, which modulates its color based upon time of day (less than 2700K for night time and more than 4000K in the morning).
 
-
 Maybe I'll steal John's disco/lightshow code and have it respond to a 'disco' or 'off' text message.
+
+PS: If the timing is way off remember to set your time zone 
 
 ### Sources:
 
