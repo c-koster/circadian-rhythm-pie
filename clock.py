@@ -27,7 +27,7 @@ end_morning = "09:00:00"
 
 # evening hours means dim-ish red lights
 start_evening = "19:00:00"
-#end_evening = "22:00:00" # no end_evening needed as the lights switch immediately
+#end_evening = "22:00:00" # no end_evening needed as the lights switch at 10pm
 
 # third option: night hours means barely visible (or just off). End at 6am
 start_night = "22:00:00"
@@ -35,20 +35,12 @@ end_night = "06:00:00"
 
 with neopixel.NeoPixel(pi_pin, numpix, brightness=brightness) as pixels:
 
-    for k in [1000,1500,5000]:
-        color = convert_K_to_RGB(k)
-        pixels.fill(color)
-        time.sleep(3)
-
-    pixels.fill(OFF_ZERO)
-    exit(0)
-
     color_change = False
     while True:
         date_string = datetime.datetime.now().strftime("%H:%M:%S")
 
         if date_string == start_morning:
-            color = convert_K_to_RGB(6000)
+            color = convert_K_to_RGB(8000)
             color_change = True
 
         elif date_string == end_morning:
@@ -56,7 +48,7 @@ with neopixel.NeoPixel(pi_pin, numpix, brightness=brightness) as pixels:
             color_change = True
 
         elif date_string == start_evening:
-            color = convert_K_to_RGB(1500)
+            color = convert_K_to_RGB(1250)
             color_change = True
 
         elif date_string == start_night:
