@@ -33,7 +33,7 @@ start_evening = "19:00:00"
 start_night = "22:00:00"
 end_night = "06:00:00"
 
-with pixels as neopixel.NeoPixel(pi_pin, numpix, brightness=brightness):
+with neopixel.NeoPixel(pi_pin, numpix, brightness=brightness) as pixels:
 
     for k in [1000,1500,5000]:
         color = convert_K_to_RGB(k)
